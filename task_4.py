@@ -27,7 +27,7 @@ async def fetch(url, sem):
     async with sem:
         async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:
-                await async_write_file(response.status)
+                await async_write_file(f'{url} : {response.status}')
 
 
 async def main(n, sem, url):

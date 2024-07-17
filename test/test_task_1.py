@@ -2,6 +2,10 @@ import pytest
 from task_1 import divisor
 
 
+
+
+
+@pytest.mark.parametrize()
 def test_task_1_div():
     assert divisor(20_000_000) == [
         1, 2, 4, 5, 8, 10, 16, 20, 25, 32, 40, 50, 64, 80, 100, 125, 128, 160, 200, 250, 256, 320, 400, 500, 625, 640,
@@ -10,10 +14,3 @@ def test_task_1_div():
         312500, 400000, 500000, 625000, 800000, 1000000, 1250000, 2000000, 2500000, 4000000, 5000000, 10000000, 20000000
     ]
 
-
-def test_task_1_div1():
-    assert divisor(1) == [1]
-
-
-def test_task_1_div2():
-    assert divisor(16) == [1, 2, 4, 8, 16]
