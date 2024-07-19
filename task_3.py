@@ -12,7 +12,6 @@ async def fetch(url, sem):
     async with sem:
         async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:
-                print(response.status)
                 return await response.text()
 
 

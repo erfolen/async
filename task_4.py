@@ -36,5 +36,5 @@ async def main(n, sem, url):
 
 if __name__ == '__main__':
     asyncio.run(main(n, sem, url))
-    print(f'Количество строк соотвествует кол-во запросов' if read_file() == n else 'Ошибка')
+    # print(f'Количество строк соотвествует кол-во запросов' if read_file() == n else 'Ошибка')
 
